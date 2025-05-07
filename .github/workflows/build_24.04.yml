@@ -30,11 +30,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: ProcessControlProd/odoo-kube-manager
-          ref: main
+          ref: ${{ github.ref }}
           path: ./external-context
           token: ${{ secrets.GH_PAT }}
-      - name: Set up Docker CLI
-        run: ls -l ./external-content
 
       - name: Set up Docker CLI
         uses: docker/setup-buildx-action@v3
