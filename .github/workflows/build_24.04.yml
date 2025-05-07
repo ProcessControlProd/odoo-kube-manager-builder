@@ -31,7 +31,7 @@ jobs:
         with:
           repository: ProcessControlProd/odoo-kube-manager
           ref: main
-          path: external-context
+          path: ./external-context
           token: ${{ secrets.GH_PAT }}
       - name: Set up Docker CLI
         run: ls -l ./external-content
